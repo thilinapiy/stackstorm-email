@@ -1,0 +1,27 @@
+---
+  name: "send_aws_email"
+  runner_type: "python-script"
+  description: "Send an email using aws SES with instace profile."
+  enabled: true
+  entry_point: "send_aws_email.py"
+  parameters:
+    email_from:
+      type: "string"
+      description: "Email address to use as FROM."
+      required: true
+    email_to:
+      type: "array"
+      description: "Email addresses to send TO."
+      required: true
+    subject:
+      type: "string"
+      description: "Subject of the email"
+      required: true
+    message:
+      type: "string"
+      description: "Message to send on the email"
+      required: true
+    region:
+      type: "string"
+      description: "Region of the SES"
+      required: true
