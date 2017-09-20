@@ -1,3 +1,4 @@
+from st2actions.runners.pythonrunner import Action
 import boto3
 
 class SendAWSEmail(Action):
