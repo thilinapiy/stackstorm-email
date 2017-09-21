@@ -6,9 +6,7 @@ class SendAWSEmail(Action):
     client = boto3.client('ses', region_name = region)
     response = client.send_email(
         Destination = {
-            'ToAddresses': [
-               email_to
-            ],
+            'ToAddresses': email_to
         },
         Message = {
             'Body': {
